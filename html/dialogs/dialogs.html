@@ -1,0 +1,25 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>{{title}}</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="cancel()">
+        <md-icon md-font-icon="fa fa-times fa-2x" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+    <md-dialog-content>
+        <div ng-repeat="message in messages">
+            <p>{{message}}</p>
+        </div>
+        <md-input-container ng-repeat="input in inputs" >
+            <label>{{input.label}}</label>
+            <input type="input.type" ng-model="input.answer" required></input>
+        </md-input-container>
+    </md-dialog-content>
+    <div class="md-actions" layout="row">
+        <md-button ng-click="cancel()">Cancel</md-button>
+        <span flex></span>
+        <md-button ng-click="ok()" >OK</md-button>
+    </div>
+</md-dialog>

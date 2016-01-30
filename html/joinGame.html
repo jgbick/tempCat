@@ -1,0 +1,24 @@
+<div>
+    <h1>Create/Join Game</h1>
+    <h3>Want to create a Game?</h3>
+    <button type = "button" id = "createButton">Create Game</button>
+    <div id="newGame" ng-show="newGame">
+        <table>
+              <label>Game Name</label><input type="text" id="gameName" ng-model="gameName"> <br>
+              <label>Game Password</label><input type = "text" id="gamePassword" ng-model="gamePass"> <br>
+        </table>
+        <button type ="button" id="createGame" > Create New Game</button>
+    </div>
+    <h3>Want to Join a Game? Search for it Here</h3>
+    <label>Game Name</label><input type="text" id="gameName" ng-model="gameName"> <br>
+    <label>Game Password</label><input type = "text" id="gamePassword" ng-model="gamePass"> <br>
+    <button type="button" id="searchGame">Search</button> <br>
+    <div id ="Game" ng-show="gameFound">
+        <table>
+            <tr ng-repeat="(key, value) in gameInfo"><td>{{key}}</td><td>{{value}}</td>
+        </table>
+        <button type ="button" id="joinGame" >Join the Game</button>
+    </div>
+    <button type = "button" id ="testGameCreate" >Send a Test game create</button>
+    <button type = "button" id ="testGameJoin" > testGameJoin</button>
+</div>
